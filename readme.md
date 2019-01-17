@@ -77,7 +77,22 @@ Received cat.jpg file: 63.9 KiB
 
 ```
 
+## Leave
+
+Files are normally deleted after a successful download, but say you wanted to download the same file to multiple hosts, then you can specify the **-l** parameter, and the file will be left on Google Drive.
+
+```
+./filesender send cat.jpg -l
+./filesender send cat.jpg -l -e
+```
+
+## Purge
+
+The **purge** or **p** allows the user to remove (or purge) all existing filesender files from Google Drive. It checks the files meta data to ensure non filesender files are not removed e.g. if they mistakenly get put in the filesender folder
+
 # Encryption
+
+**Note**: This crypto concept is taken verbosely from [skicka](https://github.com/google/skicka)
 
 1. When the **generate** function is run, **filesender** generates a random 32-byte
 When the **generate** function is run, **filesender** generates a random 32-byte
@@ -103,10 +118,10 @@ The initialization vector is also stored hex-encoded as a Google Drive file Prop
 
 # Inspiration
 
-https://github.com/Eun/gdriver
-https://github.com/prasmussen/gdrive
-https://github.com/google/skicka
-https://github.com/schollz/croc
+- https://github.com/Eun/gdriver
+- https://github.com/prasmussen/gdrive
+- https://github.com/google/skicka
+- https://github.com/schollz/croc
 
 # TODO
 - [ ] Configurable folder # [checkbox:unchecked]
