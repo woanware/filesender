@@ -7,13 +7,13 @@ More research identified [croc](https://github.com/schollz/croc), which is ideal
 
 Yes I could have debugged and potentially solved the bug, but the application had numerous interconnected libraries, and the project uses golang modules which I haven't researched yet. Also the code had lots of functionality which I didn't require and wanted to avoid e.g. third party relay.
 
-I decided to use google drive as the relay, as the auth is proven, it is commonly used, and there is an API for it.
+I decided to use Google Drive as the relay, as the auth is proven, it is commonly used, and there is an API for it.
 
-I then started to research command line google drive applications and found [gdrive](https://github.com/prasmussen/gdrive). But...it appeared unsupported, far too much functionality I didn't required, and numerous outstanding issues raised.
+Research on command line Google Drive applications found [gdrive](https://github.com/prasmussen/gdrive). But...it appeared unsupported, far too much functionality I didn't required, and numerous outstanding issues raised.
 
-Next I found [skicka](https://github.com/google/skicka), which was more recently supported, had in-built crypto. But...again too much functionality and hadn't been upgraded to the newer V3 Google Drive API.
+[skicka](https://github.com/google/skicka) was the next application found, which was more recently supported, had in-built crypto. But...again too much functionality and hadn't been upgraded to the newer V3 Google Drive API.
 
-Then I found a newly created library for golang interaction with Google Drive called [gdriver](https://github.com/Eun/gdriver). I settled on using this library for the core GD functionality, modified it slightly to permit custom meta data storage.
+A newly created library for golang interaction with Google Drive called [gdriver](https://github.com/Eun/gdriver) was identified, and is used for the core Google Drive functionality, modified it slightly to permit custom meta data storage.
 
 I used the crypto concept from [skicka](https://github.com/google/skicka), and the [mnemonicode](https://github.com/schollz/mnemonicode) concept from [magic-wormhole](https://github.com/warner/magic-wormhole)/[croc](https://github.com/schollz/croc).
 
@@ -124,12 +124,12 @@ The initialization vector is also stored hex-encoded as a Google Drive file Prop
 - https://github.com/schollz/croc
 
 # TODO
-- [ ] Configurable folder # [checkbox:unchecked]
-- [x] Use Crypto config # [checkbox:checked]
-- [x] Refactor e.g. small routines called by main functions, example get IV data from google file object, and do validation, and conversion # [checkbox:checked]
-- [x] Generate crypto config # [checkbox:checked]
-- [x] Prompt for overwriting # [checkbox:checked]
-- [x] Receive file # [checkbox:checked]
-- [x] Delete file on receive # [checkbox:checked]
+- [ ] Configurable folder
+- [x] Use Crypto config
+- [x] Refactor e.g. small routines called by main functions, example get IV data from google file object, and do validation, and conversion #
+- [x] Generate crypto config
+- [x] Prompt for overwriting
+- [x] Receive file
+- [x] Delete file on receive
 - [x] Have flag to leave file on google drive
-- [x] Delete all files # [checkbox:checked]
+- [x] Delete all files
